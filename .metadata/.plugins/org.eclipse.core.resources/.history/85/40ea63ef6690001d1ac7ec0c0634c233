@@ -1,0 +1,26 @@
+package app;
+
+import java.io.IOException;
+
+import aulapi.modelo.Endereco;
+import aulapi.modelo.servico.ServicoCep;
+
+public class Programa {
+
+	public static void main(String[] args) {
+
+
+		ServicoCep vcs = new ServicoCep();
+
+		try {
+
+			Endereco endereco = vcs.getEndereco("65300855");
+			System.out.println(endereco.toString());
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

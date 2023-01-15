@@ -1,0 +1,25 @@
+package app;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+import servico.HttpCliente;
+
+public class Programa {
+
+	public static void main(String[] args) throws IOException, InterruptedException {
+
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("Entre com url: ");
+		String url = scan.next();
+		
+		HttpCliente cliente = new HttpCliente();
+		cliente.buscarCorpoRequest(url).statusCode();
+		
+		System.out.println(cliente);
+       
+		scan.close();
+	}
+
+}

@@ -1,0 +1,5 @@
+package aulapi.modelo;
+
+public class Endereco {
+
+}
